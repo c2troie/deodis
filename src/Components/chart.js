@@ -93,7 +93,7 @@ class Chart extends React.Component {
                 text: "Resultats "
             },
             subtitles: [{
-                text: this.state.pourcentageTotal + " Positive",
+                text: Math.round(this.state.pourcentageTotal) + "% Positive",
                 verticalAlign: "center",
                 fontSize: 24,
                 dockInsidePlotArea: true,
