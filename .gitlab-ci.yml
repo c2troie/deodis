@@ -1,6 +1,9 @@
 stages:
-    -build
-    -test
+    - build
+    - test
+    - staging
+    - production
+    - performance
     
     
 build:
