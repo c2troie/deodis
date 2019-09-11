@@ -1,10 +1,9 @@
 import Sugar from 'sugar';
 import React from 'react';
 import CanvasJSReact from '../Lib/canvasjs.react';
-const CanvasJS = CanvasJSReact.CanvasJS;
 const CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
-const Sug = new Sugar;
+const Sug = new Sugar();
 
 class Chart extends React.Component {
     constructor(props) {
@@ -16,16 +15,6 @@ class Chart extends React.Component {
         }
 
 
-    }
-    componentDidMount() {
-        //console.log('Prenom',this.props.data)
-    }
-
-    UNSAFE_componentWillMount(){
-        console.log('WillMount',this.props.data)
-    }
-    UNSAFE_componentWillUpdate(){
-        console.log('WillUpdate',this.props.data)
     }
 
     async UNSAFE_componentWillReceiveProps(nextProps, nextContext) {
@@ -73,16 +62,6 @@ class Chart extends React.Component {
         return score;
     }
 
-    convertArrayToObject = (array, key) => {
-        const initialValue = {};
-        return array.reduce((obj, item) => {
-            return {
-                ...obj,
-                [item[key]]: item,
-            };
-        }, initialValue);
-    };
-
     render() {
         const options = {
             height:600,
@@ -107,14 +86,11 @@ class Chart extends React.Component {
                 dataPoints: this.state.resultat
             }]
         }
-        console.log('STATE',this.state);
         return (
             <div>
                 <CanvasJSChart options = {options}
                     /* onRef={ref => this.chart = ref} */
                 />
-                <button> REFRESH</button>
-                {/*You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods*/}
             </div>
         );
     }
