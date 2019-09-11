@@ -1,9 +1,7 @@
 stages:
     - build
     - test
-    - staging
-    - production
-    - performance
+
     
     
 build:
@@ -12,6 +10,6 @@ build:
         - echo "HelloWorld"
         
 test:
-    stage: code quality
+    stage: test
     script:
         - echo "test quality"
