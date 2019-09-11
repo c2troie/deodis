@@ -1,6 +1,9 @@
 stages:
     - build
     - test
+    - staging
+    - production
+    - performance
 
     
     
@@ -9,13 +12,57 @@ build:
     script:
         - echo "HelloWorld"
         
-test:
-    stage: test
-    script:
-        - echo "test quality"
-        
 code quality:
     stage: test
     script:
         - echo "code quality"
         
+container_scanning:
+    stage: test
+    script:
+        - echo "container scanning"
+        
+dependency_scanning:
+    stage: test
+    script:
+        - echo "dependency scanning"
+
+license management:
+    stage: test
+    script:
+        - echo "license management"
+        
+test:
+    stage: test
+    script:
+        - echo "test quality"
+        
+staging:
+    stage: staging
+    script:
+        - echo "staging"
+        
+rollout 10%:
+    stage: production
+    script:
+        - echo "rollout10"
+        
+rollout 25%:
+    stage: production
+    script:
+        - echo "rollout25"
+        
+rollout 50%:
+    stage: production
+    script:
+        - echo "rollout50"
+        
+rollout 100%:
+    stage: production
+    script:
+        - echo "rollout100"
+        
+performance:
+    stage: performance
+    script:
+        - echo "performance"
