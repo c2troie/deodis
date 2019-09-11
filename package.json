@@ -9,16 +9,18 @@
     "path": "^0.12.7",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1",
+    "serve": "^11.1.0",
     "sugar": "^2.0.6",
-    "tabletop": "^1.5.2",
-    "serve": "^11.1.0"
+    "tabletop": "^1.5.2"
   },
   "scripts": {
     "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "st": "react-scripts start",
     "heroku-postbuild": "npm run build"
   },
   "eslintConfig": {
