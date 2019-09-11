@@ -13,3 +13,9 @@ test:
     stage: test
     script:
         - echo "test quality"
+        
+code quality:
+    stage: test
+    script:
+        - echo "code quality"
+        
