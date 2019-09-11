@@ -1,0 +1,14 @@
+stages:
+    -build
+    -test
+    
+    
+build:
+    stage: build
+    script:
+        - echo "HelloWorld"
+        
+test:
+    stage: code quality
+    script:
+        - echo "test quality"
