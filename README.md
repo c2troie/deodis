@@ -1,9 +1,9 @@
 ## https://deodis.herokuapp.com/
 
-# This project is a qcm, hosting at heroku which aims to test your knowledge in DevOp.
+This project is a qcm, hosting at heroku which aims to test your knowledge in DevOp.
 
 
-## Available Scripts
+# Available Scripts
 
 In the project directory, you can run:
 
